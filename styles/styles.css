@@ -44,7 +44,7 @@ main {
 }
 
 h1, h2 {
-  margin: 1rem;
+  /* margin: 1rem; */
 }
 
 h1 {
@@ -89,6 +89,7 @@ h1 {
 }
 
 .main-heading {
+  margin: 1rem;
 }
 
 /* Main Paragraph
@@ -115,27 +116,48 @@ h1 {
   padding: 0;
 }
 
+.stat-item {
+  margin: 1rem;
+}
+
 /* Attribution
 ------------------------------------- */
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--main-paragraph-color);
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--accent-color);
 }
 
 /* Responsive Design
 ------------------------------------- */
-@media screen and (min-width: 1120px){
-  /** for sizes 1120px and larger */
+@media screen and (min-width: 1257px){
+  /** for sizes 1257px and larger */
+  .stat-item {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 1135px){
+  /** for sizes 1135px and larger */
+  body {
+    text-align: left;
+  }
   .stats-list.flex-parent {
     display: flex;
     justify-content: center;
   }
   .stat-item {
     padding: 1rem;
+    text-align: left;
+  }
+  .stat-item h2 {
+    /* text-align: left; */
+    margin: 0;
   }
   .card-header-image img {
     border-top-right-radius: 2rem;
@@ -148,13 +170,33 @@ h1 {
     /* overflow: hidden; */
     display: flow-root;
   }
-  .card img {
-    max-width: 100%;
+  .main-heading {
+    margin-left: 0;
   }
 }
 
-@media screen and (max-width: 1119px){
-  /** for sizes 1119px and smaller */
+@media screen and (max-width: 1134px){
+  /** for sizes 1134px and smaller */
+  body {
+    text-align: center;
+  }
+  main {
+    max-width: 90%;
+  }
+  .card-header-image img {
+    width: 100%;
+    height: auto;
+  }
+  .card-header-image img {
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+  .card-header-image img {
+    padding-left: 0;
+  }
+  .card-text-content {
+    padding-top: 0;
+  }
 }
 
 /* Construction Styles
