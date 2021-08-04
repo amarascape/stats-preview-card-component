@@ -30,15 +30,48 @@ body {
   background-color: var(--main-background-color);
 }
 
-/* Card Image Header
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+main {
+  width: 100%;
+  max-width: 1000px;
+  padding: 15px;
+  margin: auto;
+}
+
+img {
+  width: 300px;
+}
+
+/* Card
 ------------------------------------- */
+.card img {
+  float: right;
+}
+.card {
+  /* overflow: hidden; */
+  display: flow-root;
+}
+
+.card {
+  background-color: var(--card-background-color);
+}
+
+/* Card Header Image
+------------------------------------- */
+.card-image-header {
+  background-size: cover;
+}
 
 
 /* Card Text Content
 ------------------------------------- */
-.card-text-content {
-  background-color: var(--card-background-color);
-}
+
 
 /* Main Heading
 ------------------------------------- */
@@ -69,6 +102,16 @@ body {
   font-family: 'Lexend Deca', sans-serif;
 }
 
+.stats-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stats-list.flex-parent {
+  display: flex;
+  justify-content: center;
+}
+
 /* Attribution
 ------------------------------------- */
 .attribution {
@@ -89,13 +132,7 @@ body {
 
 @media screen and (min-width: 375px){
   /** for sizes 375px and larger */
-  .card img {
-    float: left;
-  }
-  .card {
-    /* overflow: hidden; */
-    display: flow-root;
-  }
+
 }
 
 @media screen and (max-width: 700px){
