@@ -45,7 +45,15 @@ main {
 }
 
 img {
-  width: 300px;
+  /* width: 300px; */
+}
+
+h1, h2 {
+  margin: 1rem;
+}
+
+h1 {
+  margin-left: 0;
 }
 
 /* Card
@@ -66,16 +74,20 @@ img {
   border-radius: 2rem;
 }
 
-/* Card Header Image
-------------------------------------- */
-.card-image-header {
-  background-size: cover;
+.card {
+  min-height: 22rem;
 }
 
-
+/* Card Header Image
+------------------------------------- */
+img {
+  /* size: cover; */
+}
 /* Card Text Content
 ------------------------------------- */
-
+.card-text-content {
+  padding: 2rem;
+}
 
 /* Main Heading
 ------------------------------------- */
@@ -85,6 +97,10 @@ img {
 
 #insights {
   color: var(--accent-color);
+}
+
+.main-heading {
+  /* padding-top: 22rem; */
 }
 
 /* Main Paragraph
@@ -111,11 +127,6 @@ img {
   padding: 0;
 }
 
-.stats-list.flex-parent {
-  display: flex;
-  justify-content: center;
-}
-
 /* Attribution
 ------------------------------------- */
 .attribution {
@@ -134,9 +145,15 @@ img {
 
 }
 
-@media screen and (min-width: 375px){
+@media screen and (min-width: 500px){
   /** for sizes 375px and larger */
-
+  .stats-list.flex-parent {
+    display: flex;
+    justify-content: center;
+  }
+  .stat-item {
+    padding: 1rem;
+  }
 }
 
 @media screen and (max-width: 700px){
