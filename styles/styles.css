@@ -7,3 +7,43 @@
   --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
   --stats-heading-color: hsla(0, 0%, 100%, 0.6);
 }
+
+/* Box Model Fix
+------------------------------------- */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Global Styles
+------------------------------------- */
+body {
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Attribution
+------------------------------------- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Construction Styles
+------------------------------------- */
+body {
+  border: yellow 5px solid;
+}
+
+h1, h2, h3, p, section, ul, .btn, img, header, footer, div {
+  border: lime 3px solid;
+  background-color: hsla(120, 100%, 50%, 0.2);
+}
