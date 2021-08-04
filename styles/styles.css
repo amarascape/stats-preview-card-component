@@ -2,7 +2,7 @@
   --main-background-color: hsl(233, 47%, 7%);
   --card-background-color: hsl(244, 38%, 16%);
   --accent-color: hsl(277, 64%, 61%);
-  --main-heading-color:hsl(0, 0%, 100%);
+  --main-heading-color: hsl(0, 0%, 100%);
   --stats-color: hsl(0, 0%, 100%);
   --main-paragraph-color: hsla(0, 0%, 100%, 0.75);
   --stats-heading-color: hsla(0, 0%, 100%, 0.6);
@@ -23,7 +23,50 @@ html {
 body {
   font-size: 15px;
   font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif;
+  /* font-family: 'Lexend Deca', sans-serif; */
+}
+
+body {
+  background-color: var(--main-background-color);
+}
+
+/* Card Image Header
+------------------------------------- */
+
+
+/* Card Text Content
+------------------------------------- */
+.card-text-content {
+  background-color: var(--card-background-color);
+}
+
+/* Main Heading
+------------------------------------- */
+.main-heading {
+  color: var(--main-heading-color);
+}
+
+#insights {
+  color: var(--accent-color);
+}
+
+/* Main Paragraph
+------------------------------------- */
+.main-paragraph {
+  color: var(--main-paragraph-color);
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* Stats
+------------------------------------- */
+.stats {
+  color: var(--stats-color);
+}
+
+.stat-heading {
+  color: var(--stats-heading-color);
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
 }
 
 /* Attribution
@@ -46,7 +89,13 @@ font-family: 'Lexend Deca', sans-serif;
 
 @media screen and (min-width: 375px){
   /** for sizes 375px and larger */
-
+  .card img {
+    float: left;
+  }
+  .card {
+    /* overflow: hidden; */
+    display: flow-root;
+  }
 }
 
 @media screen and (max-width: 700px){
@@ -62,5 +111,5 @@ body {
 
 h1, h2, h3, p, section, ul, .btn, img, header, footer, div {
   border: lime 3px solid;
-  background-color: hsla(120, 100%, 50%, 0.2);
+  /* background-color: hsla(120, 100%, 50%, 0.2); */
 }
