@@ -72,7 +72,7 @@ h1 {
 /* Card Header Image
 ------------------------------------- */
 .card-header-image img {
-  /* max-height: 100%; */
+  padding-left: 1rem;
 }
 
 
