@@ -23,7 +23,6 @@ html {
 body {
   font-size: 15px;
   font-family: 'Inter', sans-serif;
-  /* font-family: 'Lexend Deca', sans-serif; */
 }
 
 body {
@@ -33,19 +32,15 @@ body {
 body {
   display: flex;
   align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
 }
 
 main {
   width: 100%;
-  max-width: 1000px;
-  padding: 7.5rem;
+  max-width: 85%;
+  /* padding: 3rem; */
   margin: auto;
-}
-
-img {
-  /* width: 300px; */
 }
 
 h1, h2 {
@@ -74,19 +69,19 @@ h1 {
   border-radius: 2rem;
 }
 
-.card {
-  min-height: 22rem;
-}
-
 /* Card Header Image
 ------------------------------------- */
-img {
-  /* size: cover; */
+.card-header-image img {
+  /* max-height: 100%; */
 }
+
+
 /* Card Text Content
 ------------------------------------- */
 .card-text-content {
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem;
+  padding-right: 2rem;
 }
 
 /* Main Heading
@@ -100,7 +95,6 @@ img {
 }
 
 .main-heading {
-  /* padding-top: 22rem; */
 }
 
 /* Main Paragraph
@@ -146,13 +140,17 @@ img {
 }
 
 @media screen and (min-width: 500px){
-  /** for sizes 375px and larger */
+  /** for sizes 500px and larger */
   .stats-list.flex-parent {
     display: flex;
     justify-content: center;
   }
   .stat-item {
     padding: 1rem;
+  }
+  .card-header-image img {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
   }
 }
 
