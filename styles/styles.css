@@ -67,6 +67,19 @@ h1 {
   padding-left: 1rem;
 }
 
+.card-header-image {
+  background-color: var(--accent-color);
+}
+
+.card-header-image img {
+  object-fit: cover;
+}
+
+.card-header-image img {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
+}
+
 
 /* Card Text Content
 ------------------------------------- */
@@ -177,7 +190,7 @@ h1 {
   .card-text-content {
     width: 55%;
     padding-right: 10rem;
-}
+  }
 }
 
 @media screen and (max-width: 1134px){
