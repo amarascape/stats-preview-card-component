@@ -53,8 +53,6 @@ h1 {
 
 /* Card
 ------------------------------------- */
-
-
 .card {
   background-color: var(--card-background-color);
 }
@@ -134,11 +132,10 @@ h1 {
 
 /* Responsive Design
 ------------------------------------- */
-@media screen and (min-width: 1257px){
-  /** for sizes 1257px and larger */
-  .stat-item {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+@media screen and (min-width: 1500px){
+  /** for sizes 1500px and larger */
+  li.stat-item {
+    margin-top: 2rem;
   }
 }
 
@@ -177,6 +174,10 @@ h1 {
   .main-heading {
     margin-left: 0;
   }
+  .card-text-content {
+    width: 55%;
+    padding-right: 10rem;
+}
 }
 
 @media screen and (max-width: 1134px){
