@@ -37,6 +37,23 @@ font-family: 'Lexend Deca', sans-serif;
   color: hsl(228, 45%, 44%);
 }
 
+/* Responsive Design
+------------------------------------- */
+@media screen and (min-width: 1440px){
+  /** for sizes 1440px and larger */
+
+}
+
+@media screen and (min-width: 375px){
+  /** for sizes 375px and larger */
+
+}
+
+@media screen and (max-width: 700px){
+  /** for sizes 699px and smaller */
+
+}
+
 /* Construction Styles
 ------------------------------------- */
 body {
