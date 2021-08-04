@@ -62,6 +62,10 @@ img {
   background-color: var(--card-background-color);
 }
 
+.rounded-corners {
+  border-radius: 2rem;
+}
+
 /* Card Header Image
 ------------------------------------- */
 .card-image-header {
@@ -143,10 +147,10 @@ img {
 /* Construction Styles
 ------------------------------------- */
 body {
-  border: yellow 5px solid;
+  /* border: yellow 5px solid; */
 }
 
 h1, h2, h3, p, section, ul, .btn, img, header, footer, div {
-  border: lime 3px solid;
+  /* border: lime 3px solid; */
   /* background-color: hsla(120, 100%, 50%, 0.2); */
 }
