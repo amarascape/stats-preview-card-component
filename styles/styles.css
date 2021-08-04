@@ -53,13 +53,7 @@ h1 {
 
 /* Card
 ------------------------------------- */
-.card img {
-  float: right;
-}
-.card {
-  /* overflow: hidden; */
-  display: flow-root;
-}
+
 
 .card {
   background-color: var(--card-background-color);
@@ -134,13 +128,8 @@ h1 {
 
 /* Responsive Design
 ------------------------------------- */
-@media screen and (min-width: 1440px){
-  /** for sizes 1440px and larger */
-
-}
-
-@media screen and (min-width: 500px){
-  /** for sizes 500px and larger */
+@media screen and (min-width: 1120px){
+  /** for sizes 1120px and larger */
   .stats-list.flex-parent {
     display: flex;
     justify-content: center;
@@ -152,11 +141,20 @@ h1 {
     border-top-right-radius: 2rem;
     border-bottom-right-radius: 2rem;
   }
+  .card img {
+    float: right;
+  }
+  .card {
+    /* overflow: hidden; */
+    display: flow-root;
+  }
+  .card img {
+    max-width: 100%;
+  }
 }
 
-@media screen and (max-width: 700px){
-  /** for sizes 699px and smaller */
-
+@media screen and (max-width: 1119px){
+  /** for sizes 1119px and smaller */
 }
 
 /* Construction Styles
