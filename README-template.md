@@ -33,8 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://amarascape.github.io/stats-preview-card-component/index.html](https://amarascape.github.io/stats-preview-card-component/index.html)
 
 ## My process
 
@@ -45,35 +44,93 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [justify-content | CSS-Tricks](https://css-tricks.com/almanac/properties/j/justify-content/)
+- [A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) 
+- [Bootstrap v5.1.0](https://www.bootstrapcdn.com/) - For styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### Centering Main on Webpage
+```css
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 
-To see how you can add code snippets, see below:
+main {
+  width: 100%;
+  max-width: 85%;
+  padding: 1rem;
+  margin: auto;
+}
+```
 
+#### Defining different images for media sizes in HTML
 ```html
-<h1>Some HTML code I'm proud of</h1>
+  <picture>
+    <source srcset="images/image-header-desktop.jpg" media="(min-width: 950px)">
+    <source srcset="images/image-header-mobile.jpg" media="(max-width: 949px)">
+    <img id="HEADER_IMAGE" class="img-fluid" alt="image: people using laptops">
+  </picture>
+```
+
+#### Applying a tint to an image (where tint can be any color)
+```html
+ <div class="card-header-image">
+   <picture>
+     <source srcset="images/image-header-desktop.jpg" media="(min-width: 950px)">
+     <source srcset="images/image-header-mobile.jpg" media="(max-width: 949px)">
+     <img id="HEADER_IMAGE" class="img-fluid" alt="image: people using laptops">
+   </picture>
+ </div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card-header-image {
+  background-color: var(--accent-color);
+}
+
+#HEADER_IMAGE {
+  object-fit: cover;
+}
+
+#HEADER_IMAGE {
+  min-width: 100%;
+}
+
+#HEADER_IMAGE {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+#### Creating a grid and defining where to place items in the grid
+```html
+  <div class="card">
+    <div class="card"> ...
+    <div class="card"> ...
+  </div>
+```
+```css
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-text-content {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  ```
+#### Justifying the elements in a flex box so they spread evenly 
+```html
+<ul class="stats-list flex-parent"> ...
+```
+```css
+.stats-list.flex-parent {
+    display: flex;
+    justify-content: space-around;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
