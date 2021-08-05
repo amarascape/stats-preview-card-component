@@ -42,7 +42,7 @@ h1, h2 {
 }
 
 h1 {
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 
 /* Centering Card on Webpage
@@ -77,11 +77,15 @@ main {
   background-color: var(--accent-color);
 }
 
-.card-header-image img {
+#HEADER_IMAGE {
   object-fit: cover;
 }
 
-.card-header-image img {
+#HEADER_IMAGE {
+  min-width: 100%;
+}
+
+#HEADER_IMAGE {
   mix-blend-mode: multiply;
   opacity: 0.8;
 }
@@ -90,7 +94,6 @@ main {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
-
 
 /* Card Text Content
 ------------------------------------- */
@@ -155,9 +158,59 @@ main {
 
 /* Responsive Design
 ------------------------------------- */
-@media screen and (min-width: 800px){
+@media screen and (min-width: 950px){
   /** for sizes 800px and larger */
-
+  /* ***** Global Styles ***** */
+  body {
+    text-align: left;
+  }
+  /* ***** Centering Card on Webpage ***** */
+  main {
+    padding-top: 4rem;
+  }
+  /* ***** Card ***** */
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  /* ***** Card Header Image ***** */
+  .card-header-image {
+    /* grid-column-start: 2; */
+  }
+  .card-header-image {
+    border-radius: 0;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  #HEADER_IMAGE {
+    min-height: 500px;
+  }
+  /* ***** Card Text Content ***** */
+  .card-text-content {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  /* ***** Main Heading ***** */
+  h1 {
+    padding-top: 0;
+  }
+  /* ***** Main Paragraph ***** */
+  .main-paragraph {
+    padding-bottom: 2rem;
+  }
+  /* ***** Stats ***** */
+  .stats-list.flex-parent {
+    display: flex;
+  }
+  .stat-item:first-of-type {
+   padding-left: 0;
+  }
+  .stats-list {
+    margin: 0;
+  }
+  .stat-item {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 799px){
