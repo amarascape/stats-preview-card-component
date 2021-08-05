@@ -14,9 +14,7 @@ This is a solution to the [Stats preview card component challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,20 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+- [Desktop View](screenshots/desktop-view-screenshot.png)
+- [Mobile View](screenshots/mobile-view-screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://amarascape.github.io/stats-preview-card-component/index.html](https://amarascape.github.io/stats-preview-card-component/index.html)
 
 ## My process
 
@@ -52,59 +42,106 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Bootstrap v5.1.0](https://www.bootstrapcdn.com/) - For styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+#### Centering Main on Webpage
+```css
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 
-To see how you can add code snippets, see below:
+main {
+  width: 100%;
+  max-width: 85%;
+  padding: 1rem;
+  margin: auto;
+}
+```
 
+#### Defining different images for media sizes in HTML
 ```html
-<h1>Some HTML code I'm proud of</h1>
+  <picture>
+    <source srcset="images/image-header-desktop.jpg" media="(min-width: 950px)">
+    <source srcset="images/image-header-mobile.jpg" media="(max-width: 949px)">
+    <img id="HEADER_IMAGE" class="img-fluid" alt="image: people using laptops">
+  </picture>
+```
+
+#### Applying a tint to an image (where tint can be any color)
+```html
+ <div class="card-header-image">
+   <picture>
+     <source srcset="images/image-header-desktop.jpg" media="(min-width: 950px)">
+     <source srcset="images/image-header-mobile.jpg" media="(max-width: 949px)">
+     <img id="HEADER_IMAGE" class="img-fluid" alt="image: people using laptops">
+   </picture>
+ </div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.card-header-image {
+  background-color: var(--accent-color);
+}
+
+#HEADER_IMAGE {
+  object-fit: cover;
+}
+
+#HEADER_IMAGE {
+  min-width: 100%;
+}
+
+#HEADER_IMAGE {
+  mix-blend-mode: multiply;
+  opacity: 0.8;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+#### Creating a grid and defining where to place items in the grid
+```html
+  <div class="card">
+    <div class="card"> ...
+    <div class="card"> ...
+  </div>
+```
+```css
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-text-content {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  ```
+#### Justifying the elements in a flex box so they spread evenly 
+```html
+<ul class="stats-list flex-parent"> ...
+```
+```css
+.stats-list.flex-parent {
+    display: flex;
+    justify-content: space-around;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+- Flex Box
+- Grid
+- Bootstrap 
+- ``` <source> ```
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [object-fit - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) -  Guide on how an ``` <img> ``` can be resized to fit it's container- 
+- [CSS border-top-left-radius Property](https://www.w3schools.com/cssref/css3_pr_border-top-left-radius.asp) - Guide on how to apply borders radius to specific corners
+- [justify-content | CSS-Tricks](https://css-tricks.com/almanac/properties/j/justify-content/) - Great resource for how to justify content in a flexbox 
+- [A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - Great resource for how to style grids
+- [FireShot](https://getfireshot.com/) - Extension to take screenshots of webpages 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Github - [amarascape](https://github.com/amarascape/)
