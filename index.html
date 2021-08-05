@@ -19,9 +19,13 @@
 
 <body>
   <main>
-    <div class="card rounded-corners">
+    <div class="card">
       <div class="card-header-image">
-        <img class="img-fluid" src="images/image-header-desktop.jpg" />
+        <picture>
+          <source srcset="images/image-header-desktop.jpg" media="(min-width: 800px)">
+          <source srcset="images/image-header-mobile.jpg" media="(max-width: 799px)">
+          <img id="HEADER_IMAGE" class="img-fluid" alt="image: people using laptops">
+        </picture>
       </div>
       <div class="card-text-content">
 
