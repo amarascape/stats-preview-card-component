@@ -133,11 +133,11 @@ main {
 - Flex Box
 - Grid
 - Bootstrap 
-- <source>
+- ``` <source> ```
 
 ### Useful resources
 
-- [object-fit - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) -  Guide on how an <img> can be resized to fit it's container- 
+- [object-fit - CSS: Cascading Style Sheets | MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit) -  Guide on how an ``` <img> ``` can be resized to fit it's container- 
 - [CSS border-top-left-radius Property](https://www.w3schools.com/cssref/css3_pr_border-top-left-radius.asp) - Guide on how to apply borders radius to specific corners
 - [justify-content | CSS-Tricks](https://css-tricks.com/almanac/properties/j/justify-content/) - Great resource for how to justify content in a flexbox 
 - [A Complete Guide to Grid | CSS-Tricks](https://css-tricks.com/snippets/css/complete-guide-grid/) - Great resource for how to style grids
