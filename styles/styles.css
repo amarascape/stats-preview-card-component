@@ -201,6 +201,7 @@ main {
   /* ***** Stats ***** */
   .stats-list.flex-parent {
     display: flex;
+    justify-content: space-around;
   }
   .stat-item:first-of-type {
    padding-left: 0;
